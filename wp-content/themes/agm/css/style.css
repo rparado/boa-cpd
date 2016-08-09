@@ -1,0 +1,810 @@
+
+/*------------------------------------------------------------------
+[Stylesheet]
+Project:		
+Version:		1.0
+Last change:	Date created
+Assigned to:					
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+	[Table of Contents]
+	1. Images Sprites
+	2. Global
+	3. helpers
+	4. Media Queries
+	
+
+	[Color codes]
+	Background:	#262626 (Dark Grey)
+	Content:	#3b3b3b (Light Black)
+	Header h1:	#a70d00 (Dark Red)
+	a (standard):	#0046e4 (Bright Blue)
+	a (visited):	#009ce4 (Lighter Blue)
+
+	[Typography]
+	Body copy:	12px/1.3 Verdana, Arial, Helvetica, sans-serif;
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+/*------------------------------------------------------------------
+	[ 1 Images Sprites ]
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+	[ 2 Global ]
+-------------------------------------------------------------------*/
+html,
+body {
+	height: 100%;
+}
+body {
+	background: #fff;
+	color: #000;
+	font-family: HelveticaNeue,Arial,Helvetica,sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #5f5f5f;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+	font-weight: normal;
+	margin-top: 0;
+}
+h1 { 
+	font-size: 30px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+h1 span {
+	color: #b5121b;
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+h2 { font-size: 25px } 
+h3 {font-size: 20px;} 
+h4 {font-size: 18px;} 
+h5 {font-size: 16px;} 
+h6 {font-size: 14px;}
+a {
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+	text-decoration: none;
+}
+
+a:hover, 
+a:focus,
+a:visited { 
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none; 
+}
+
+input, 
+button, 
+textarea, 
+select {
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+pre,
+tt,
+code,
+kbd,
+samp,
+var {
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+ol ol li { list-style-type: lower-alpha; }
+ol ol ol li { list-style-type: lower-roman; }
+ul li {list-style: none;}
+q { font-style: italic; }
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #333;
+	cursor: help;
+}
+p {
+	margin: 0 0 20px;
+}
+textarea {
+	resize:none;
+	overflow-y:auto;
+}
+/*------------------------------------------------------------------
+	[ 3 helpers ]
+-------------------------------------------------------------------*/
+.valign-parent {
+	height: 100px;
+	white-space: nowrap;
+}
+.valign-item {
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+}
+.valign-helper {
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+.ie7 .valign-item,
+.ie7 .valign-helper {
+	display: inline;
+	zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after { clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix { *zoom: 1; }
+.wp1,
+.wp2,
+.wp3,
+.wp4,
+.wp5,
+.wp6,
+.wp7,
+.wp8,
+.wp9 {
+	visibility: hidden;
+}
+
+.fadeInDown,
+.fadeInUp,
+.fadeIn {
+	visibility: visible;
+}
+
+.delay-05s {
+	-webkit-animation-delay: 0.5s;
+		-moz-animation-delay: 0.5s;
+		-ms-animation-delay: 0.5s;
+		 -o-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+}
+
+.delay-1s {
+	-webkit-animation-delay: 1s;
+		-moz-animation-delay: 1s;
+		-ms-animation-delay: 1s;
+		 -o-animation-delay: 1s;
+			animation-delay: 1s;
+}
+
+.delay-105s {
+	-webkit-animation-delay: 1.5s;
+		-moz-animation-delay: 1.5s;
+		-ms-animation-delay: 1.5s;
+		 -o-animation-delay: 1.5s;
+			animation-delay: 1.5s;
+}
+.delay-2s {
+	-webkit-animation-delay: 2s;
+		-moz-animation-delay: 2s;
+		-ms-animation-delay: 2s;
+		 -o-animation-delay: 2s;
+			animation-delay: 2s;
+}
+.delay-205s {
+	-webkit-animation-delay: 2.5s;
+		-moz-animation-delay: 2.5s;
+		-ms-animation-delay: 2.5s;
+		 -o-animation-delay: 2.5s;
+			animation-delay: 2.5s;
+}
+.delay-3s {
+	-webkit-animation-delay: 3s;
+		-moz-animation-delay: 3s;
+		-ms-animation-delay: 3s;
+		 -o-animation-delay: 3s;
+			animation-delay: 3s;
+}
+/*------------------------------------------------------------------
+	[ 4 Media quesries ]
+-------------------------------------------------------------------*/
+.outer-wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+.home-wrapper {
+	overflow: hidden
+}
+
+/*Landing page*/
+.subscription-page {
+	background: url('../images/subscription-page-wrapper.jpg') no-repeat;
+	background-size: cover;
+}
+.subscription-page .container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.subscription-page .boa-banner {
+	margin-bottom: 17px;
+}
+.subscription-page .banner-image {
+	margin-bottom: 0;
+}
+.phone-number-holder {
+	margin-bottom: 30px;
+}
+.subscription-page .form-control {
+	border: 2px solid #959595;
+	border-radius: 0;
+	text-align: center;
+	height: 57px;
+}
+.subscription-page .wpcf7-submit {
+	background: #00bff3;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+	font-size: 24px;
+	width: 226px;
+	height: 57px;
+	padding: 14px 20px;
+	margin: 0 auto;
+	text-align: center;
+	text-transform: uppercase;
+}
+div.wpcf7-validation-errors,
+div.wpcf7-mail-sent-ng {
+	color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+	margin: 2em 0 1em;
+}
+/* hide original loader */
+div.wpcf7 img.ajax-loader {
+    display: none;
+}
+/* style for custom loader
+   '1s' for speeding up animation */
+i.fa.fa-refresh.fa-spin.ajax-loader-cusom {
+    -webkit-animation: fa-spin 1s infinite linear;
+    animation: fa-spin 1s infinite linear;
+}
+
+
+/*Main Page*/
+.banner-wrapper {
+	background: url(../images/banner-bg.jpg) no-repeat;
+	background-size: cover;
+	padding-top: 100px;
+	padding-bottom: 70px;
+}
+.banner-image {
+	margin-bottom: 83px;
+}
+.register-now {
+	background: #00bff3;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+	font-size: 24px;
+	width: 226px;
+	height: 57px;
+	padding: 14px 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+.content-header-wrapper {
+	background: #00bff3;
+	color: #fff;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+	font-size: 24px;
+	line-height: 27px;
+	padding: 34px 0;
+	text-align: center;
+}
+.content-header-wrapper p {
+	margin-bottom: 0;
+}
+.main-content {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.main-content p {
+	font-size: 16px;
+	text-align: center;
+}
+
+.main-page-title h1 {
+	color: #fff;
+	font-size: 23px;
+	margin-bottom: 0;
+}
+.learn-wrapper {
+	border: 3px solid #00bff3;
+	margin-bottom: 48px;
+	padding: 23px 37px;
+    font-size: 16px;
+}
+.learn-wrapper h3 {
+	color: #000;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: center;
+}
+.learn-wrapper ul {
+	padding-left: 0;
+}
+.learn-wrapper ul li {
+	list-style: disc;
+}
+.testimonials-wrapper {
+	padding-top: 30px;
+}
+.mobile-testimonial-title h4 {
+	font-size: 20px;
+	color: #252525;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.slide-content {
+	margin-bottom: 30px;
+}
+.slide-content p {
+	font-size: 16px;
+	text-align: center;
+}
+.slide-content h4 {
+	display: none;
+}
+.slide-content h5 {
+	color: #252525;
+	text-align: right;
+}
+.cycle-pager {
+	display: none;
+}
+.speakers-profile h3 {
+	color: #fff;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+.speaker-content-wrapper {
+	background: url('../images/profile-bg.jpg') no-repeat;
+	background-size: cover;	
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.speaker-content-wrapper .container {
+	background: #cceef7;
+	padding-top: 44px;
+	text-align: center;
+	color: #252525;
+	font-size: 16px;
+	padding-bottom: 37px;
+}
+.speaker-content-wrapper .promaker-wrapper {
+	display: none;
+}
+.speaker-image {
+	display: none;
+}
+.footer-wrapper {
+	background: #00bff3;
+	padding-top: 34px;
+	padding-bottom: 38px;
+}
+.footer-wrapper h5 {
+	color: #fff;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+.contact-person {
+	background: url(../images/icon-user.gif) no-repeat top center;
+	padding-top: 85px;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.contact-person p {
+	margin-bottom: 0;
+	font-size: 20px;
+}
+.contact-mail {
+	background: url(../images/icon-mail.gif) no-repeat top center;
+	padding-top: 85px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.contact-mail a,
+.contact-number a {
+	color: #fff;
+	font-size: 20px;
+	display: block;
+}
+.contact-number {
+	background: url(../images/icon-call.gif) no-repeat top center;
+	padding-top: 85px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.promaker-wrapper {
+	background: #003470;
+	opacity: 0.97;
+	
+}
+.promaker-wrapper .container {
+	background: #003470;
+	opacity: 0.97;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
+.promaker-wrapper .container .promaker-site {
+	margin-bottom: 30px;
+}
+.promaker-wrapper .container a.logo-promaker {
+	display: block;
+}
+.promaker-wrapper .container a.logo-promaker img {
+	margin: 0 auto;
+}
+.product-wrapper .container {
+	padding-top: 30px;
+	padding-bottom: 136px;
+}
+.product-wrapper .container h3 {
+	color: #003470;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+.promaker-wrapper .container a.cart-show {
+	position: relative;
+	display: block;
+	width: 59px;
+	margin: 0 auto;
+}
+.promaker-wrapper .container span.cart-icon {
+	background: url('../images/icon-cart.png') no-repeat;
+	width: 59px;
+	height: 49px;
+	display: block;
+}
+.promaker-wrapper .container span.cart-items {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -o-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    -ms-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    position: absolute;
+    right: -5px;
+    top: -6px;
+    border-radius: 50%;
+    background: #F44336;
+    font-size: 12px;
+    min-width: auto;
+    height: 32px;
+    width: 32px;
+    padding: 3px;
+    line-height: 24px;
+	text-align: center;
+	color: #fff;
+}
+
+
+
+.product-wrapper label {
+	display: block;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+	font-size: 18px;
+	color: #003470;
+}
+.location-select-wrapper,
+.date-select-wrapper,
+.thematic-select-wrapper {
+	margin-bottom: 15px;
+}
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+	width: 100%;
+}
+
+
+#products-table {
+	width: 100%;
+	border: 3px solid #003470;
+}
+
+#products-table thead tr td {
+	background: #003470;
+	color: #fff;
+	font-size: 20px;
+	padding: 15px 10px;
+	text-align: center;
+	font-family: HelveticaNeue,Arial,Helvetica,sans-serif;
+	text-align: center;
+}
+#products-table tr td {
+	padding: 10px;
+}
+#products-table tr td,
+#products-table tr td h3 {
+	vertical-align: middle;
+	font-family: HelveticaNeue,Arial,Helvetica,sans-serif;
+	text-align: center;
+	font-size: 17px;
+	color: #252525;
+}
+#products-table tr td h3 {
+	margin-bottom: 0;
+}
+#products-table tr td.price-main-wrapper .current-price,
+#products-table tr td.retail-price .regular-price,
+.product-price-label {
+	display: none;
+}
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover, 
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit, 
+.woocommerce a.button, 
+.woocommerce button.button, 
+.woocommerce input.button {
+	background: #003470;
+	color: #fff;
+	font-size: 14px;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+	padding: 10px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 5px;
+}
+.product-wrapper .woocommerce {
+	margin-bottom: 75px;
+}
+.proceed-to-cart .cart-btn {
+	background: #00bff3;
+	border-radius: 5px;
+	display: block;
+	width: 225px;
+	height: 57px;
+	text-align: center;
+	font-size: 24px;
+	font-family: HelveticaNeue-Bold, Arial, sans-serif;
+	line-height: 34px;
+	color: #fff;
+	padding: 10px;
+	margin: 0 auto;
+}
+#products-table tr td.blue-color {
+	background: #00bff3;
+	font-size: 24px;
+	color: #fff;
+	line-height: 24px;
+}
+@media only screen and (min-width: 768px) {
+	.speakers-profile h3 {
+		font-size: 36px;
+	}
+	.subscription-page form {
+		width: 510px;
+		margin: 0 auto;
+	}
+	.subscription-page .form-control {
+		font-size: 24px;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.content-header-wrapper {
+		font-size: 36px;
+		line-height: 40px;
+	}
+	.content-header-wrapper .container {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+	.main-content {
+		padding-top: 106px;
+		padding-bottom: 75px;
+	}
+	.main-content p {
+		font-size: 22px;
+	}
+	.learn-wrapper {
+		padding: 23px 68px;
+	}
+	.learn-wrapper h3 {
+		font-size: 22px;
+		margin-bottom: 20px;
+	}
+	.learn-wrapper ul li {
+		width: 50%;
+		float: left;
+		font-size: 18px;
+	}
+	.main-page-title h1 {
+		font-size: 36px;
+	}
+	.mobile-testimonial-title h4 {
+		display: none;
+	}
+	
+	.testimonials-wrapper {
+		padding-top: 0;
+	}
+	.slide-items {
+		position: relative;
+	}
+	.slide-content {
+		color: #fff;
+		font-size: 24px;
+		position: absolute;
+		width: 600px;
+		top: 64px;
+		left: 50%;
+		margin-left: -300px;
+		z-index: 10;
+		text-align: center;
+	}
+	.slide-content h4 {
+		display: block;
+		color: #fff;
+		font-size: 30px;
+		margin-bottom: 50px;
+	}
+	.slide-content p {
+		font-size: 24px;
+		line-height: 24px;
+		margin-bottom: 25px;
+	}
+	.slide-content h5 {
+		color: #fff;
+		font-size: 24px;
+		text-align: center;
+	}
+	.cycle-pager .cycle-pager-active,
+	.cycle-pager span {
+		background: url(../images/pager-slide.png) no-repeat;
+		width: 15px;
+		height: 15px;
+		display: block;
+		float: left;
+		color: transparent;
+	}
+	.cycle-pager span {
+		background-position: 0 0;
+		margin-left: 8px;
+	}
+	.cycle-pager .cycle-pager-active {
+		background-position: 0 -17px;
+	}
+	.cycle-pager span:first-child {
+		margin-left: 0;
+	}
+	.cycle-pager {
+		display: block;
+		position: absolute;
+		width: 61px;
+		left: 50%;
+		margin-left: -30.5px;
+		bottom: 46px;
+		z-index: 10;
+	}
+	.promaker-wrapper {
+		display: none;
+	}
+	.speaker-content-wrapper {
+		height: 742px;
+	}
+	.speaker-content-wrapper > .container {
+		padding-top: 90px;
+		padding-bottom: 133px;
+		height: 742px;
+		font-size: 19px;
+		line-height: 30px;
+		text-align: left;
+		position: relative;
+		padding-bottom: 8px;
+	}
+	.speaker-content-wrapper .promaker-wrapper {
+		display: block;
+		position: absolute;
+		z-index: 100;
+		bottom: 37px;
+		left: 0;
+		width: 100%;
+	}
+	.speaker-content-left {
+		width: 480px;
+		float: left;
+	}
+	.speaker-image {
+		position: absolute;
+		width: 541px;
+		top: 30px;
+		right: -70px;
+		z-index: 2;
+		display: block;
+	}
+	.footer-wrapper {
+		padding-bottom: 8px;
+	}
+	.contact-person,
+	.contact-mail {
+		margin-bottom: 0;
+	}
+	
+	.promaker-wrapper .container .promaker-site,
+	.promaker-wrapper .container a.logo-promaker img,
+	.promaker-wrapper .container a.cart-show {
+		margin: 0;
+	}
+	.promaker-wrapper .container a.logo-promaker {
+		width: 289px;
+	}
+	.promaker-wrapper .container a.cart-show {
+		float: right;
+	}
+	.cart-counter-wrapper {
+		padding-top: 10px;
+	}
+	
+	.option-group-wrapper {
+		width: 898px;
+		margin: 0 auto 30px;
+	}
+	.location-select-wrapper, 
+	.date-select-wrapper {
+		margin-right: 52px;
+	}
+	.location-select-wrapper, 
+	.date-select-wrapper, 
+	.thematic-select-wrapper {
+		width: 260px;
+		float: left;
+		margin-bottom: 0;
+	}
+	
+}
+@media only screen and (min-width: 1200px) {
+	.content-header-wrapper .container {
+		padding-left: 209px;
+		padding-right: 209px;
+	}
+	.main-page-title .container {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+	.slide-content p {
+		line-height: 28px;
+	}
+	.slide-content h4 {
+		margin-bottom: 90px;
+	}
+	.speaker-content-wrapper > .container {
+		font-size: 22px;
+
+	}
+	.speaker-content-left {
+		width: 608px;
+	}
+	
+}
+
+
+

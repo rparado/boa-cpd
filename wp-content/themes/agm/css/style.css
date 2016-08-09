@@ -69,6 +69,11 @@ h6 {font-size: 14px;}
 a {
 	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
 	text-decoration: none;
+	-webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    	transition: all 0.3s ease-in-out;
 }
 
 a:hover, 
@@ -673,7 +678,12 @@ i.fa.fa-refresh.fa-spin.ajax-loader-cusom {
 	font-family: HelveticaNeue-Bold, Arial, sans-serif;
 	padding: 9px 0;
 }
-.woocommerce a.remove:hover {
+.woocommerce #respond input#submit:hover, 
+.woocommerce a.button:hover, 
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce a.remove:hover,
+.proceed-to-cart .cart-btn:hover {
 	background: #f26a50;
 }
 .woocommerce .cart-collaterals, 

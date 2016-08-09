@@ -98,5 +98,11 @@
 		}
 		
 		$('.selectpicker').selectpicker();
+		
+		if($('.thematic').length > 0) {
+			$('.thematic').on('change', function(){
+				
+			})
+		}
 	});
 })(jQuery);

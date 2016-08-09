@@ -18,3 +18,8 @@
 		</div>
 	</div>
 </footer>
+<div class="pajama">
+	<div class="container">
+		<p>All Right Reserve 2015 I4ONE Global Creative Team</p>
+	</div>
+</div>

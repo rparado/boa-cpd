@@ -136,7 +136,7 @@
 			</div>
 			<div class="thematic-select-wrapper">
 				<label for="theamtic area">Thematic Area:</label>
-				<select class="thematic" name="thematic area">
+				<select class="thematic selectpicker" name="thematic area">
 					<option>ALL</option>
 					<option value="I">I</option>
 					<option value="II">II</option>

@@ -22,9 +22,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wc_print_notices();
 
-do_action( 'woocommerce_before_cart' ); ?>
+do_action( 'woocommerce_before_cart' ); 
+$return_to = site_url().'/training/#products-table';
 
-<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+?>
+<a href="<?php echo $return_to; ?>" class="button wc-forward pull-right" style="margin-bottom: 15px;">Continue Shopping</a>
+<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post" class="clearfix" style="clear:both">
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 <div class="table-responsive">

@@ -97,12 +97,18 @@
 			$('#products-table tbody tr td.date:contains("December")').first().parent('tr').before('<tr><td colspan="8" class="blue-color">December</td</tr>');
 		}
 		
-		$('.selectpicker').selectpicker();
+		//$('.selectpicker').selectpicker();
 		
-		if($('.thematic').length > 0) {
-			$('.thematic').on('change', function(){
-				
-			})
-		}
+		$('.thematic').change(function() {
+			$('.hideShowTr').hide();    
+			$('tr#' + $(this).val()).show();
+			//$("tr:not(:#"+$(this).val()+")").hide(); 
+		});
+		$('.date-select').change(function() {
+			$('.hideShowTr').hide();    
+			$('tr.'+$(this).val()).show();
+			//$("tr:not(:#"+$(this).val()+")").hide(); 
+		});
+		
 	});
 })(jQuery);

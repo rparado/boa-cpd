@@ -448,7 +448,7 @@ i.fa.fa-refresh.fa-spin.ajax-loader-cusom {
 }
 
 .pajama {
-	background: url(../images/pajama.gif) repeat-x;
+	background: url(../images/pajama.gif);
 }
 .pajama .container {
 	padding-top: 3px;
@@ -539,6 +539,13 @@ i.fa.fa-refresh.fa-spin.ajax-loader-cusom {
 .date-select-wrapper,
 .thematic-select-wrapper {
 	margin-bottom: 15px;
+}
+.select-block {
+	color: #003470;
+	border: 1px solid #003470;
+	width: 100%;
+	padding: 3px;
+	border-radius: 5px;
 }
 .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
 	width: 100%;

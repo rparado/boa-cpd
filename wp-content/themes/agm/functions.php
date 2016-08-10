@@ -3,7 +3,8 @@
 	/* This file will be referenced every time a template/page loads on your Wordpress site
 	/* This is the place to define custom fxns and specialty code
 	/*-----------------------------------------------------------------------------------*/
-
+update_option( 'siteurl', 'http://localhost/github/boa-cpd' );
+update_option( 'home', 'http://localhost/github/boa-cpd' );
 // Define the version so we can easily replace it throughout the theme
 define( 'AGM', 1.0 );
 define('TEMPLATE_URL', get_bloginfo('template_url'));
@@ -82,12 +83,10 @@ function agm_scripts()  {
 	wp_enqueue_style('font.css', get_stylesheet_directory_uri() . '/fonts/font.css');
 	wp_enqueue_style('animate.css', get_stylesheet_directory_uri() . '/css/animate.css');
 	wp_enqueue_style('fonticons.css', get_stylesheet_directory_uri() . '/css/font-awesome.css');
-	wp_enqueue_style('bootstrap-select.css', get_stylesheet_directory_uri() . '/css/bootstrap-select.css');
 	wp_enqueue_style('bootstrap.css', get_stylesheet_directory_uri() . '/css/style.css');
 	
 	// get the theme directory of js codes and link to it in the footer
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array( 'jquery' ), AGM, true );
-	wp_enqueue_script( 'select', get_template_directory_uri() . '/js/bootstrap-select.js', array( 'jquery' ), AGM, true );
 	wp_enqueue_script( 'cycle', get_template_directory_uri() . '/js/cycle.min.js', array( 'jquery' ), AGM, true );
 	wp_enqueue_script( 'waypoints', get_template_directory_uri() . '/js/waypoints.js', array( 'jquery' ), AGM, true );
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), AGM, true );

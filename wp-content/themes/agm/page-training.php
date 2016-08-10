@@ -113,7 +113,7 @@
 		<div class="option-group-wrapper clearfix">
 			<div class="location-select-wrapper">
 				<label for="location">Location:</label>
-				<select class="selectpicker" name="location">
+				<select class="select-block" name="location">
 					<option>ALL</option>
 					<option>Manila</option>
 					<option>Cebu</option>
@@ -124,22 +124,23 @@
 			</div>
 			<div class="date-select-wrapper">
 				<label for="date">Date:</label>
-				<select class="selectpicker" name="date">
-					<option>ALL</option>
-					<option>July</option>
-					<option>August</option>
-					<option>September</option>
-					<option>October</option>
-					<option>November</option>
-					<option>December</option>
+				<select class="select-block date-select" name="date">
+					<option value="#">ALL</option>
+					<option value="July">July</option>
+					<option value="August">August</option>
+					<option value="September">September</option>
+					<option value="October">October</option>
+					<option value="November">November</option>
+					<option value="December">December</option>
 				</select>
 			</div>
 			<div class="thematic-select-wrapper">
 				<label for="theamtic area">Thematic Area:</label>
-				<select class="thematic selectpicker" name="thematic area">
-					<option>ALL</option>
+				<select class="thematic select-block" name="thematic area">
+					<option value="#">ALL</option>
 					<option value="I">I</option>
 					<option value="II">II</option>
+					<option value="II-IV-V">II-IV-V</option>
 					<option value="III">III</option>
 					<option value="IV">IV</option>
 					<option value="V">V</option>

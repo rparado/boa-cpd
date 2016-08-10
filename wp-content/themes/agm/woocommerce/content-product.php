@@ -27,9 +27,13 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
-?>
 
-<tr>
+?>
+<?php
+	$date = new DateTime(get_field('date'));
+	//echo $date->format('F'); // should print 07 August
+?>
+<tr id="<?php echo get_field('thematic_area'); ?>" class="hideShowTr <?php echo $date->format('F'); ?>">
 	<td class="date" data-date = "<?php echo get_field('date'); ?>" width="12.5%">
 		<?php echo get_field('date'); ?>
 	</td>
@@ -43,7 +47,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		do_action( 'woocommerce_shop_loop_item_title' );
 		?>
 	</td>
-	<td><?php echo get_field('thematic_area'); ?></td>
+	<td class="thematic-area-data" data-value = <?php echo get_field('thematic_area'); ?>><?php echo get_field('thematic_area'); ?></td>
 	<td><?php echo get_field('credit'); ?></td>
 	<td class="price-main-wrapper">
 		<?php

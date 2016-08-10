@@ -33,7 +33,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	$date = new DateTime(get_field('date'));
 	//echo $date->format('F'); // should print 07 August
 ?>
-<tr id="<?php echo get_field('thematic_area'); ?>" class="hideShowTr <?php echo $date->format('F'); ?>">
+<tr class="hideShowTr <?php echo $date->format('F'); ?> <?php echo get_field('thematic_area'); ?>">
 	<td class="date" data-date = "<?php echo get_field('date'); ?>" width="12.5%">
 		<?php echo get_field('date'); ?>
 	</td>

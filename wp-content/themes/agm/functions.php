@@ -3,8 +3,7 @@
 	/* This file will be referenced every time a template/page loads on your Wordpress site
 	/* This is the place to define custom fxns and specialty code
 	/*-----------------------------------------------------------------------------------*/
-update_option( 'siteurl', 'http://localhost/github/boa-cpd' );
-update_option( 'home', 'http://localhost/github/boa-cpd' );
+
 // Define the version so we can easily replace it throughout the theme
 define( 'AGM', 1.0 );
 define('TEMPLATE_URL', get_bloginfo('template_url'));

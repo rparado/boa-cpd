@@ -100,13 +100,20 @@
 		//$('.selectpicker').selectpicker();
 		
 		$('.thematic').change(function() {
-			$('.hideShowTr').hide();    
-			$('tr#' + $(this).val()).show();
-			//$("tr:not(:#"+$(this).val()+")").hide(); 
+			$('.hideShowTr').hide();
+			$('tr.' + $(this).val()).show();
+			if( $('.thematic').val() === 'All' ){
+				$('.hideShowTr').show();
+			}
 		});
+		
 		$('.date-select').change(function() {
 			$('.hideShowTr').hide();    
-			$('tr.'+$(this).val()).show();
+			$('tr.' +$(this).val()).show();
+			
+			if( $('.date-select').val() === 'All' ){
+				$('.hideShowTr').show();
+			}
 			//$("tr:not(:#"+$(this).val()+")").hide(); 
 		});
 		

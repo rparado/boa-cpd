@@ -107,7 +107,7 @@
 		</div>
 	</div>
 </div>
-<div class="product-wrapper">
+<div class="product-wrapper" id="product-page-container">
 	<div class="container">
 		<h3>investment fee:</h3>
 		<div class="option-group-wrapper clearfix">
@@ -125,7 +125,7 @@
 			<div class="date-select-wrapper">
 				<label for="date">Date:</label>
 				<select class="select-block date-select" name="date">
-					<option value="#">ALL</option>
+					<option value="All">ALL</option>
 					<option value="July">July</option>
 					<option value="August">August</option>
 					<option value="September">September</option>
@@ -137,7 +137,7 @@
 			<div class="thematic-select-wrapper">
 				<label for="theamtic area">Thematic Area:</label>
 				<select class="thematic select-block" name="thematic area">
-					<option value="#">ALL</option>
+					<option value="All">ALL</option>
 					<option value="I">I</option>
 					<option value="II">II</option>
 					<option value="II-IV-V">II-IV-V</option>
@@ -150,7 +150,7 @@
 		
 		<?php echo do_shortcode('[products orderby="menu_order"]');?>
 		<div class="proceed-to-cart">
-			<a class="cart-btn" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
+			<a class="cart-btn" id="proceed-cart"href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
 				Proceed to cart
 			</a>
 		</div>

@@ -82,7 +82,7 @@ $return_to = site_url().'/training/#products-table';
 							<?php 
 								$s_package_price = get_field('package_of', $_product->id);
 								if($s_package_price) {
-									?>&#x20B1;<?php echo $s_package_price; ?>
+									?><?php echo wc_price($s_package_price); ?>
 							<?php } ?>
 						</td>
 						<td class="product-remove">

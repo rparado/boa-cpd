@@ -78,7 +78,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 		<?php 
 			$s_package_price = get_field('package_of');
 			if($s_package_price) {
-				?>&#x20B1;<?php echo get_field('package_of'); ?>
+				?><?php echo wc_price(get_field('package_of')); ?>
 			<?php } ?>
 	</td>
 	

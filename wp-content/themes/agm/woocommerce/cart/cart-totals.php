@@ -31,7 +31,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<tr class="cart-subtotal">
 			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>">
+			
+			<?php
+				global $woocommerce;
+				if(WC()->cart->get_cart_contents_count() < 8) {
+					echo wc_price($woocommerce->cart->total);
+				} else {
+					$counter = WC()->cart->get_cart_contents_count();
+					$sub_total = wc_price(3999.00 * $counter);
+					echo $sub_total;
+				}
+				
+			?>
+			</td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -90,9 +103,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<tr class="order-total">
 			<th><?php _e( 'Total(VAT incl.)', 'woocommerce' ); ?></th>
-			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>" class="total-price"><?php wc_cart_totals_order_total_html(); ?></td>
+			<td data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>" class="total-price">
+			<?php 
+				global $woocommerce;
+				if(WC()->cart->get_cart_contents_count() < 8) {
+					echo wc_price($woocommerce->cart->total);
+				} else {
+					$counter = WC()->cart->get_cart_contents_count();
+					echo wc_price(3999.00 * $counter);
+				}
+				
+			?>
+			</td>
 		</tr>
-
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 
 	</table>

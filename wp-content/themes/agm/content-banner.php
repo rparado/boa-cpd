@@ -18,7 +18,7 @@
 			}
 
 		?>
-		<a href="" class="register-now wp3 delay-05s" title="register now">Register Now!</a>
+		<a href="#product-page-container" class="register-now wp3 delay-05s" title="register now">Go to training!</a>
 	</div>
 	
 </div>

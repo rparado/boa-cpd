@@ -21,7 +21,7 @@
 		<h3>What can you learn from him?</h3>
 		<?php echo get_field('additional_fields'); ?>
 	</div>
-	<a href="" class="register-now wp5 delay-05s" title="register now">Register Now!</a>
+	<a href="#product-page-container" class="register-now wp3 delay-05s" title="register now">Go to training!</a>
 </div><!-- main-content -->
 <div class="content-header-wrapper main-page-title">
 	<div class="container">
